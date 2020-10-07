@@ -33,19 +33,19 @@ if [[ `uname` == 'Darwin' ]]; then
   fi
 
   # Homebrew packages.
-  brew install diff-so-fancy gnupg htop node pbzip2 python python@2 ruby postgresql wget
-  # echo 'Tweaking macOS...'
-    # source 'etc/macos.sh'
+  brew install diff-so-fancy gnupg htop node pbzip2 python python@2 ruby wget
+  echo 'Tweaking macOS...'
+  source 'etc/macos-settings.sh'
 
   # https://github.com/sindresorhus/quick-look-plugins
-  # echo 'Installing Quick Look plugins...'
-  #   brew tap phinze/homebrew-cask
-  #   brew install caskroom/cask/brew-cask
-  #   brew cask install suspicious-package quicklook-json qlmarkdown qlstephen qlcolorcode
+  echo 'Installing Quick Look plugins...'
+  brew tap phinze/homebrew-cask
+  brew install caskroom/cask/brew-cask
+  brew cask install suspicious-package quicklook-json qlmarkdown qlstephen qlcolorcode
 fi
 
 echo 'Symlinking config files...'
-  source 'etc/symlink-dotfiles.sh'
+source 'etc/symlink-dotfiles.sh'
 
 echo 'Applying sublime config...'
   st=$(pwd)/sublime/packages
